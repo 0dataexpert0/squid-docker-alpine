@@ -1,0 +1,13 @@
+squid:
+  build: .
+#  image: 0dataexpert0/squid
+  container_name: squid1
+  ports:
+    - "3128:3128"
+  volumes:
+#    - ./cache/:/var/spool/squid/
+    - ./squid.conf:/etc/squid/squid.conf
+    - ./squid_passwd:/etc/squid/squid_passwd
+  restart: always
+
+
